@@ -1,10 +1,27 @@
+import React from "react";
 import imagem1 from "../images/1.jpg";
 import imagem2 from "../images/2.jpg";
 import imagem3 from "../images/3.jpg";
 import imagem4 from "../images/4.jpg";
 import imagem5 from "../images/5.jpg";
 import imagem6 from "../images/6.jpg";
+import youtube from "../images/youtube.png";
 
+const overlayStyle = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "rgba(0, 0, 0, 0.5)",
+};
+
+const overlayText = {
+  color: "#fff",
+};
 
 export default function HomeScreen() {
   const videos = [
@@ -29,7 +46,7 @@ export default function HomeScreen() {
     {
       id: 4,
       thumbnail: imagem4,
-      title: "Essa Folha Está Controlando a Minha Vida",
+      title: "Entenda como essa Folha Está Controlando a Minha Vida",
       timestamp: "há 10 horas",
     },
     {
@@ -44,51 +61,13 @@ export default function HomeScreen() {
       title: "O Sistema de Produtividade INSANO de Stephen Wolfram",
       timestamp: "há 1 dia",
     },
-  ];
+  ]
 
   return (
     <div>
-      {/* Começa aqui o carrossel  */}
-      <div className="container">
-        <div id="carouselExample" className="carousel slide">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src="//picsum.photos/id/25/1300/400" className="d-block" />
-            </div>
-            <div className="carousel-item">
-              <img src="//picsum.photos/id/45/1300/400" className="d-block" />
-            </div>
-            <div className="carousel-item">
-              <img src="//picsum.photos/id/75/1300/400" className="d-block" />
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+      <div className="container d-flex justify-content-center">
+        <img src={youtube} alt="" id="youtube" />
       </div>
-      {/* termina  aqui o carrossel  */}
 
       <div className="container">
         <div className="row">
@@ -113,33 +92,7 @@ export default function HomeScreen() {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-12">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="card mb-4 rounded-3 shadow-sm">
-                <div className="card-header py-3">
-                  <h4 className="my-0 fw-normal">Livre</h4>
-                </div>
-                <div className="card-body">
-                  <h1 className="card-title pricing-card-title"></h1>
-                  <ul className="list-unstyled mt-3 mb-4">
-                    <li>Acesso à central de ajuda</li>
-                  </ul>
-                  <button
-                    type="button"
-                    className="w-100 btn btn-lg btn-outline-primary"
-                  >
-                    Cadastre-se gratuitamente
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">1</div>
-            <div className="col-md-4">2</div>
-          </div>
-        </div>
-      </div>
+    
     </div>
   );
 }

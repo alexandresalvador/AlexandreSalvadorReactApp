@@ -1,3 +1,18 @@
+#root {
+  background-image: url('/src/images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#youtube {
+  height: 50%; 
+}
+
+#youtube-footer {
+  height: 35%;
+}
+
 .App {
   text-align: center;
 }
